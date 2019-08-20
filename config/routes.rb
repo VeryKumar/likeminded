@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-resources :tests, :users, :groups
+resources :tests, only: [:index, :new, :create, :show, :delete]
+resources :users
+resources :groups
 end
