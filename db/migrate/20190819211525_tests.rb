@@ -8,5 +8,6 @@ class Tests < ActiveRecord::Migration[5.2]
       t.integer :c_value
       t.integer :n_value
       t.integer :o_value
+    end
   end
 end
