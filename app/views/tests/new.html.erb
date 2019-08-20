@@ -195,11 +195,18 @@
 
 <%= form_for @test do |f| %>
 <div class="question-form">
-   <%= f.label :question_1 %> <br />
+   <%= f.label :e_value, 'Question 1' %> <br />
    <%= f.label :e_value, 'Disagree' %>
-   <%= f.radio_button :e_value, 'male' %>
-   <%= f.label :gender_female, 'Agree' %>
-   <%= f.radio_button :a_value, 'female' %><br />
+   <%= f.radio_button :e_value, :value => "1" %>
+   <%= f.label :e_value, 'Partially Disagree' %>
+   <%= f.radio_button :e_value, :value => "2" %>
+   <%= f.label :e_value, 'Neutral' %>
+   <%= f.radio_button :e_value, :value => "3" %>
+   <%= f.label :e_value, 'Partially Agree' %>
+   <%= f.radio_button :e_value, :value => "4" %>
+   <%= f.label :e_value, 'Agree' %>
+   <%= f.radio_button :e_value, :value => "5" %><br />
 </div>
+    <%=f.submit%>
 
 <% end %>
