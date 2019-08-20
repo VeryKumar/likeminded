@@ -16,7 +16,7 @@ class UsersController < ApplicationController
         @user = User.create(user_params)
         
         if @user.valid?
-        redirect_to user_path @user
+            redirect_to user_path @user
         else 
           flash[:errors] = @user.error.full_messages
           redirect_to new_user_path
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     end
     
     def edit
-        @user = user.find(params[:id])
+        @user = User.find(params[:id])
     end
     
     def update
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         @user.destroy
     
-        redirect_to user_path(@users)
+        redirect_to users_path
     end
 
     private

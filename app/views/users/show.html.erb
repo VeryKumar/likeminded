@@ -1,0 +1,10 @@
+<img  src= <%= @user.picture %> >
+<br>
+<h1> Name: <%= @user.name %></h1>
+<br>
+<p> Bio: <%= @user.bio %></p>
+<br><hr><br>
+<%= button_to "Edit Profile", edit_user_path(@user), :method => :get %>
+<br><hr><br>
+<%= button_to "Delete Profile", user_path(@user), :method => :delete %>
+
