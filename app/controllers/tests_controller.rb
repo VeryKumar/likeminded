@@ -9,9 +9,12 @@ class TestsController < ApplicationController
 
     def create
         @test = Test.new(test_params)
+        @test.save
+        redirect_to test_path @test
     end
 
     def show
+        @test = Test.find(test_params[:id])
     end
 
     def delete

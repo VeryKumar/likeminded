@@ -194,19 +194,79 @@
 =end%>
 
 <%= form_for @test do |f| %>
-<div class="question-form">
+<div class="question-form1">
    <%= f.label :e_value, 'Question 1' %> <br />
    <%= f.label :e_value, 'Disagree' %>
-   <%= f.radio_button :e_value, :value => "1" %>
+   <%= f.radio_button :e_value, 1 %>
    <%= f.label :e_value, 'Partially Disagree' %>
-   <%= f.radio_button :e_value, :value => "2" %>
+   <%= f.radio_button :e_value, 2 %>
    <%= f.label :e_value, 'Neutral' %>
-   <%= f.radio_button :e_value, :value => "3" %>
+   <%= f.radio_button :e_value, 3 %>
    <%= f.label :e_value, 'Partially Agree' %>
-   <%= f.radio_button :e_value, :value => "4" %>
+   <%= f.radio_button :e_value, 4 %>
    <%= f.label :e_value, 'Agree' %>
-   <%= f.radio_button :e_value, :value => "5" %><br />
+   <%= f.radio_button :e_value, 5 %><br />
 </div>
-    <%=f.submit%>
+<%end%>
+<%= form_for @test do |f| %>
+<div class="question-form2">
+   <%= f.label :e_value, 'Question 2' %> <br />
+   <%= f.label :e_value, 'Disagree' %>
+   <%= f.radio_button :e_value, 1 %>
+   <%= f.label :e_value, 'Partially Disagree' %>
+   <%= f.radio_button :e_value, 2 %>
+   <%= f.label :e_value, 'Neutral' %>
+   <%= f.radio_button :e_value, 3 %>
+   <%= f.label :e_value, 'Partially Agree' %>
+   <%= f.radio_button :e_value, 4 %>
+   <%= f.label :e_value, 'Agree' %>
+   <%= f.radio_button :e_value, 5 %><br />
+</div>
+<%end%>
+<%= form_for @test do |f| %>
+<div class="question-form3">
+   <%= f.label :e_value, 'Question 3' %> <br />
+   <%= f.label :e_value, 'Disagree' %>
+   <%= f.radio_button :e_value, 1 %>
+   <%= f.label :e_value, 'Partially Disagree' %>
+   <%= f.radio_button :e_value, 2 %>
+   <%= f.label :e_value, 'Neutral' %>
+   <%= f.radio_button :e_value, 3 %>
+   <%= f.label :e_value, 'Partially Agree' %>
+   <%= f.radio_button :e_value, 4 %>
+   <%= f.label :e_value, 'Agree' %>
+   <%= f.radio_button :e_value, 5 %><br />
+</div>
+<%end%>
+<%= form_for @test do |f| %>
+<div class="question-form4">
+   <%= f.label :e_value, 'Question 4' %> <br />
+   <%= f.label :e_value, 'Disagree' %>
+   <%= f.radio_button :e_value, 1 %>
+   <%= f.label :e_value, 'Partially Disagree' %>
+   <%= f.radio_button :e_value, 2 %>
+   <%= f.label :e_value, 'Neutral' %>
+   <%= f.radio_button :e_value, 3 %>
+   <%= f.label :e_value, 'Partially Agree' %>
+   <%= f.radio_button :e_value, 4 %>
+   <%= f.label :e_value, 'Agree' %>
+   <%= f.radio_button :e_value, 5 %><br />
+</div>
+<%end%>
+<%= form_for @test do |f| %>
+<div class="question-form5">
+   <%= f.label :e_value, 'Question 5' %> <br />
+   <%= f.label :e_value, 'Disagree' %>
+   <%= f.radio_button :e_value, 1 %>
+   <%= f.label :e_value, 'Partially Disagree' %>
+   <%= f.radio_button :e_value, 2 %>
+   <%= f.label :e_value, 'Neutral' %>
+   <%= f.radio_button :e_value, 3 %>
+   <%= f.label :e_value, 'Partially Agree' %>
+   <%= f.radio_button :e_value, 4 %>
+   <%= f.label :e_value, 'Agree' %>
+   <%= f.radio_button :e_value, 5 %><br />
+</div>
+    <%=f.submit "Submit Test" %>
 
 <% end %>
