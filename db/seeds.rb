@@ -8,7 +8,7 @@
 require 'faker'
 include Faker 
 
-10.times do
+20.times do
     User.create(
         name: Faker::Name.name,
         bio: Faker::Quote.matz,
