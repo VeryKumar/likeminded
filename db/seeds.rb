@@ -16,14 +16,16 @@ include Faker
     )
 end
 
-Group.create(name:"1")
-Group.create(name:"2")
-Group.create(name:"3")
-Group.create(name:"4")
-Group.create(name:"5")
+Group.create(name:"e")
+Group.create(name:"a")
+Group.create(name:"o")
+Group.create(name:"n")
+Group.create(name:"c")
 
+puts "Seeding Questions"
 Question.create(trait:"a", content:"I sympathize with others' feelings")
 Question.create(trait:"c", content:"I like order")
 Question.create(trait:"e", content:"I am the life of the party")
 Question.create(trait:"o", content:"I have a good imagination")
 Question.create(trait:"n", content:"More often than not, I am stressed")
+puts "Done seeding questions"

@@ -1,2 +1,17 @@
 <!--need to automatically generate a test that has empty values--> 
-<%render 'testform'%>
+<%= form_tag '/tests', method: :post do %>
+<div class="question-form">
+   <%= label_tag 'Question 1' %> <br />
+   <%= label_tag 'e_1','Disagree' %>
+   <%= radio_button_tag 'e',  "1"  %>
+   <%= label_tag 'e_2', 'Partially Disagree' %>
+   <%= radio_button_tag 'e', "2" %>
+   <%= label_tag 'e_3', 'Neutral' %>
+   <%= radio_button_tag 'e', "3" %>
+   <%= label_tag 'e_4', 'Partially Agree' %>
+   <%= radio_button_tag 'e', "4" %>
+   <%= label_tag 'e_5', 'Agree' %>
+   <%= radio_button_tag 'e', "5" %><br />
+</div>
+    <%=submit_tag%>
+<% end %>
