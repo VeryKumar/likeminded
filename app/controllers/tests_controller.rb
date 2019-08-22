@@ -1,6 +1,6 @@
 class TestsController < ApplicationController
     def index
-        @tests = Test.all
+        @tests = Test.all.order('created_at DESC')
     end
 
     def new
@@ -9,12 +9,31 @@ class TestsController < ApplicationController
 
     def create
         @test = Test.new(test_params)
+        if @test.save
+            redirect_to @film
+        else
+            render 'new'
+        end
     end
 
     def show
+        @test = Test.find(params[:id])
     end
 
-    def delete
+    def edit
+        @test = Test.find(params[:id])
+    end
+
+    def update
+        @test = Test.find(params[:id])
+        if @test.update(test_params)
+            redirect_to @test
+        else
+            render 'edit'
+        end
+    end
+
+    def destroy
         Test.find(params[:id]).destroy
         flash[:success] = "Test Deleted"
         redirect_to user_path(@user)
