@@ -6,23 +6,28 @@
 <br><hr><br>
 <h3> Favorites </h3>
 <ul>
-    <% for @user.favoritees do |favorite| %>
-    <li> <%= favorite.favoritee.name %> 
-    (<%= link_to "Remove Favorite", favorite, :method => :delete %>)
+    <% @user.favorited_users.each do |favoritee| %>
+    <li> <%= favoritee.name %> 
+    (<%= link_to "Remove Favorite", delete_favorite_user_path(favoritee), :method => :delete %>)
     </li>
     <% end %>
 </ul>
 <br><hr><br>
 <h3> Favorited by Users</h3>
 <ul>
-    <% for @user.favoriter do |user| %>
-    <li> <%= user.favoriter.name %> </li>
+    <% @user.users_who_favorited_me.each do |favoriter| %>
+    <li> <%= favoriter.name %> </li>
     <% end %>
 </ul>
 <br><hr><br>
-<%= button_to "Favorite Like-Minded User", favorites_path(:favoritee_id => user), :method => :post %>
+<%= button_to "Favorite Like-Minded User", "/users/#{@user.id}/favorite", :method => :get %>
 <br><hr><br>
+<% if @user == current_user %>
 <%= button_to "Edit Profile", edit_user_path(@user), :method => :get %>
+<% end %>
 <br><hr><br>
+<% if @user == current_user %>
 <%= button_to "Delete Profile", user_path(@user), :method => :delete %>
+<% end %>
+
 
