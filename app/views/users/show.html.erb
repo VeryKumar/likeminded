@@ -1,4 +1,4 @@
-<img  src= <%= @user.picture %> >
+<img  src= <%= @user.picture %>>
 <br>
 <h1> Name: <%= @user.name %></h1>
 <br>
@@ -19,6 +19,8 @@
     <li> <%= favoriter.name %> </li>
     <% end %>
 </ul>
+<br><hr><br>
+<%= button_to "View All Users", users_path(@users), :method => :get %>
 <br><hr><br>
 <%= button_to "Favorite Like-Minded User", "/users/#{@user.id}/favorite", :method => :get %>
 <br><hr><br>
